@@ -53,8 +53,6 @@ public class CartController {
         return ResponseEntity.ok().build();
     }
 
-    
-
     @PutMapping("updatebyid/{id}")  //http://localhost:8080/cart/deletebyid/{id}
     public ResponseEntity<Cart> updateCartItem(@PathVariable Long id, @RequestBody Cart updatedCart) {
         Optional<Cart> cartOptional = cartReository.findById(id);
